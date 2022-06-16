@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 
-const ShaderImage = dynamic(() => import('../shaderImage'), {
+const WaveImage = dynamic(() => import('../components/waveImage'), {
     ssr: false,
     loading: () => (
         <div
@@ -19,7 +19,7 @@ const ShaderImage = dynamic(() => import('../shaderImage'), {
 })
 
 const Home: NextPage = () => {
-    return <ShaderImage />
+    return <WaveImage />
 }
 
 export default Home

@@ -49,7 +49,7 @@ const Wave = () => {
     )
 }
 
-const ShaderImage = () => {
+const WaveImage = () => {
     const WaveShaderMaterial = shaderMaterial(
         {
             uTime: 0,
@@ -73,4 +73,4 @@ const ShaderImage = () => {
     )
 }
 
-export default ShaderImage
+export default WaveImage
