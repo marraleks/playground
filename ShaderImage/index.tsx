@@ -1,6 +1,6 @@
 import { Suspense, useRef, useState } from 'react'
 import * as THREE from 'three'
-import { Html, shaderMaterial, useAspect } from '@react-three/drei'
+import { shaderMaterial, useAspect } from '@react-three/drei'
 import { Canvas, extend, useFrame, useLoader } from '@react-three/fiber'
 import vertex from './shaders/vertex.vert'
 import fragment from './shaders/fragment.frag'
