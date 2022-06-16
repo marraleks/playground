@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 
-const ShaderImage = dynamic(() => import('../ShaderImage'), {
+const ShaderImage = dynamic(() => import('../shaderImage'), {
     ssr: false,
     loading: () => (
         <div
