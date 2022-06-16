@@ -1,34 +1,37 @@
 {
-  "name": "plane-shader",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@react-three/drei": "^9.13.0",
-    "@react-three/fiber": "^8.0.26",
-    "babel-plugin-glsl": "^1.0.0",
-    "glsl-random": "^0.0.5",
-    "next": "12.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "three": "^0.141.0"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.43",
-    "@types/react": "18.0.12",
-    "@types/react-dom": "18.0.5",
-    "@types/three": "^0.141.0",
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
-    "glslify": "^7.1.1",
-    "glslify-loader": "^2.0.0",
-    "next-compose-plugins": "^2.2.1",
-    "raw-loader": "^4.0.2",
-    "typescript": "4.7.3"
-  }
+    "name": "plane-shader",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@react-three/drei": "^9.13.0",
+        "@react-three/fiber": "^8.0.26",
+        "babel-plugin-glsl": "^1.0.0",
+        "glsl-random": "^0.0.5",
+        "next": "12.1.6",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "three": "^0.141.0",
+        "glslify": "^7.1.1",
+        "glslify-loader": "^2.0.0",
+        "raw-loader": "^4.0.2"
+    },
+    "devDependencies": {
+        "@types/node": "17.0.43",
+        "@types/react": "18.0.12",
+        "@types/react-dom": "18.0.5",
+        "@types/three": "^0.141.0",
+        "eslint": "8.17.0",
+        "eslint-config-next": "12.1.6",
+        "glslify": "^7.1.1",
+        "glslify-loader": "^2.0.0",
+        "next-compose-plugins": "^2.2.1",
+        "raw-loader": "^4.0.2",
+        "typescript": "4.7.3"
+    }
 }
