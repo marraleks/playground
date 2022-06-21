@@ -1,4 +1,8 @@
 const nextConfig = {
+    experimental: {
+        // Enables the styled-components SWC transform
+        styledComponents: true,
+    },
     webpack(config) {
         // Allow importing of shader files (e.g. `.glsl` -- filenames below)
         // @see: https://github.com/glslify/glslify-loader
