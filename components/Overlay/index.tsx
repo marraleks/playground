@@ -38,11 +38,13 @@ export default function Overlay() {
                 <br />
             </BottomRight>
             <Darkmode
-                onClick={() =>
+                onClick={() => {
+                    console.log('test')
+
                     theme == 'light'
                         ? setTheme('dark')
                         : theme == 'dark' && setTheme('light')
-                }
+                }}
             />
         </Container>
     )
