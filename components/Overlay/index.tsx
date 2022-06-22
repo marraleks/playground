@@ -1,46 +1,57 @@
 import { Container, TopLeft, BottomLeft, BottomRight, Darkmode } from './styles'
 import { Arrow } from 'components/Icons'
 import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
-export default function Overlay() {
+interface OverlayProps {
+    prev?: string
+    next?: string
+    content: { heading: string[]; subheading: string; desc: string }
+}
+
+export default function Overlay({ prev, next, content }: OverlayProps) {
+    const [mounted, setMounted] = useState(false)
     const { theme, setTheme } = useTheme()
+
+    // When mounted on client, now we can show the UI
+    useEffect(() => setMounted(true), [])
+
+    if (!mounted) return null
 
     return (
         <Container>
             <TopLeft>
                 <h1>
-                    01
+                    {content.heading[0]}
                     <br />
-                    Wave Shader
+                    {content.heading[1]}
                 </h1>
-                <p>React Three Fiber & Shaders</p>
+                <p>{content.subheading}</p>
             </TopLeft>
             <BottomLeft>
-                <Arrow color="black" direction="left" />
-                <Arrow color="black" direction="right" />
+                {prev ? (
+                    <Link href={prev}>
+                        <a>
+                            <Arrow color="black" direction="left" size={45} />
+                        </a>
+                    </Link>
+                ) : (
+                    <Arrow disabled color="black" direction="left" size={45} />
+                )}
+                {next ? (
+                    <Link href={next}>
+                        <a>
+                            <Arrow color="black" direction="right" size={45} />
+                        </a>
+                    </Link>
+                ) : (
+                    <Arrow disabled color="black" direction="right" size={45} />
+                )}
             </BottomLeft>
-            <BottomRight>
-                Inspiration and ideas
-                <br />
-                Fundamentals
-                <br />
-                Finding models
-                <br />
-                Preparing them for the web
-                <br />
-                Displaying and changing models
-                <br />
-                Animation fundamentals
-                <br />
-                Effects and making things look good
-                <br />
-                Performance and time to load
-                <br />
-            </BottomRight>
+            <BottomRight>{content.desc}</BottomRight>
             <Darkmode
                 onClick={() => {
-                    console.log('test')
-
                     theme == 'light'
                         ? setTheme('dark')
                         : theme == 'dark' && setTheme('light')

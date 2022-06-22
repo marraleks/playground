@@ -67,14 +67,19 @@ const WaveImage = () => {
 
     return (
         <>
-            <Suspense fallback={null}>
-                <Canvas gl={{ alpha: true, antialias: true }} dpr={[1, 2]}>
-                    <Wave />
-                    <Startup />
-                </Canvas>
-                <Overlay />
-                <FadeIn />
-            </Suspense>
+            <Canvas gl={{ alpha: true, antialias: true }} dpr={[1, 2]}>
+                <Wave />
+                <Startup />
+            </Canvas>
+            <Overlay
+                content={{
+                    heading: ['01', 'Wave Shader'],
+                    subheading: 'React Three Fiber & Shaders',
+                    desc: 'Inspiration and ideas Fundamentals Finding models Preparing them for the web Displaying and changing models Animation fundamentals Effects and making things look good Performance and time to load',
+                }}
+                next={'/test'}
+            />
+            <FadeIn />
         </>
     )
 }

@@ -33,6 +33,8 @@ export const TopLeft = styled.div`
 `
 
 export const BottomLeft = styled.div`
+    display: flex;
+    gap: 1rem;
     position: absolute;
     bottom: 4vw;
     left: 4vw;
@@ -44,13 +46,15 @@ export const BottomRight = styled.div`
     position: absolute;
     bottom: 4vw;
     right: 4vw;
-    width: 35ch;
-    max-width: 40%;
+    width: 30ch;
+    max-width: 50%;
     text-align: right;
+    font-family: 'Kern', sans-serif;
 `
 
 export const Darkmode = styled.div`
     position: absolute;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     top: 4vw;

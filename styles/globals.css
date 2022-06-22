@@ -3,6 +3,11 @@
     src: url('/Respira-Black.otf') format('opentype');
 }
 
+@font-face {
+    font-family: Kern;
+    src: url('/Kern_Standard.otf') format('opentype');
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -406,97 +411,4 @@ canvas {
     z-index: -1;
     left: 0;
     top: 0;
-}
-
-.dot-elastic {
-    position: relative;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #000;
-    color: #000;
-    animation: dotElastic 1s infinite linear;
-    margin-top: 2rem;
-}
-
-.dot-elastic::before,
-.dot-elastic::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0;
-}
-
-.dot-elastic::before {
-    left: -15px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #000;
-    color: #000;
-    animation: dotElasticBefore 1s infinite linear;
-}
-
-.dot-elastic::after {
-    left: 15px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #000;
-    color: #000;
-    animation: dotElasticAfter 1s infinite linear;
-}
-
-@keyframes dotElasticBefore {
-    0% {
-        transform: scale(1, 1);
-    }
-    25% {
-        transform: scale(1, 1.5);
-    }
-    50% {
-        transform: scale(1, 0.67);
-    }
-    75% {
-        transform: scale(1, 1);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes dotElastic {
-    0% {
-        transform: scale(1, 1);
-    }
-    25% {
-        transform: scale(1, 1);
-    }
-    50% {
-        transform: scale(1, 1.5);
-    }
-    75% {
-        transform: scale(1, 1);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes dotElasticAfter {
-    0% {
-        transform: scale(1, 1);
-    }
-    25% {
-        transform: scale(1, 1);
-    }
-    50% {
-        transform: scale(1, 0.67);
-    }
-    75% {
-        transform: scale(1, 1.5);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
 }
